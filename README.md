@@ -1,7 +1,10 @@
 # w1
 Linux kernel w1 netlink client
 
-Linux kernel w1 documentation: https://www.kernel.org/doc/Documentation/w1/w1.netlink
+Linux kernel w1 netlink documentation: https://www.kernel.org/doc/Documentation/w1/w1.netlink
+w1 over netlink can be used to work with w1 hardware (both master and slave devices) from userspace
+with noticebly lower latencies than via sysfs files.
+
 
 This source be used as an example on how to bind to netlink connector socket,
 how to create messages and parse replies.
