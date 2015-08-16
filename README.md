@@ -11,3 +11,11 @@ Master supports device listing, slave search, bus reset and generic w1 read/writ
 You can also manually add/remove slave device ID.
 
 Slave commands are device specific.
+
+To build the binary you have to edit `Makefile` and specify include path to w1 kernel drivers,
+in particular you need path to directory where `w1_netlink.h` file is located.
+
+For example add this string to `INCLUDES` option if your linux kernel source tree (only w1 headers are actually needed) lives at `/lib/modules/4.0.8-200.fc21.x86_64/source/`:
+```
+-I/lib/modules/4.0.8-200.fc21.x86_64/source/drivers/w1
+```
